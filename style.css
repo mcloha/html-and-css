@@ -11,13 +11,21 @@
    ========================================================================== */
 * {font-family: cursive;}
 
-body { background-color: lightgoldenrodyellow;}
+.HolyGrail-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgoldenrodyellow;
+}
 
-.header {background-color: lightgoldenrodyellow;}
-
-hgroup{
-    background-color: deepskyblue;
+.HolyGrail-body{
+    background-color: white;
     border:1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.HolyGrail-body * {
+    margin-top:15px;
 }
 
 a {color:lightgoldenrodyellow;}
@@ -27,7 +35,7 @@ a:hover {color:yellow;}
 
 article>p {color:black;}
 article{
-    background-color: deepskyblue;
+    background-color: lightgoldenrodyellow;
     border:1px solid black;
 }
 ul {
@@ -39,19 +47,67 @@ ul a {text-decoration:none;}
 
 #button * {
     border:1px solid black;
-    background-color: deepskyblue;
+    background-color: lightgoldenrodyellow;
 }
 span *{
-    background-color: deepskyblue;
+    background-color: lightgoldenrodyellow;
     border:1px solid black;
 }
 aside{
-    background-color: deepskyblue;
+    background-color: lightgoldenrodyellow;
     border:1px solid black;
 }
 footer{
     background-color: #4d4d4d;
     border:1px solid black;
+}
+/*=================================FLEXBOX===================================*/
+.HolyGrail {
+  display: flex;
+  min-height: 120vh;
+}
+
+.HolyGrail-content {
+    display: flex;
+    flex-wrap: nowrap;
+    margin:10px;
+}
+.HolyGrail-content * {
+    margin:10px;
+}
+.HolyGrail-nav, .HolyGrail-ads {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.HolyGrail-nav {
+  order: -1;
+}
+.HolyGrail-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@media (max-width: 640px) {
+  .HolyGrail-body {
+    flex-direction: column;
+    flex: 1;
+  }
+  .HolyGrail-header {
+    display: flex;
+      flex-direction: column;
+    justify-content: ;
+    background-color: lightgoldenrodyellow;
+  }
+  .HolyGrail-content {
+    flex: 1;
+    flex-wrap: wrap;
+  }
+  .HolyGrail-nav, .HolyGrail-ads {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+  }
 }
 
 /*===========================================================================*/
